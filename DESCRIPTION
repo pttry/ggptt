@@ -1,0 +1,11 @@
+Package: ggptt
+Type: Package
+Title: Themes and ggplot2 functions for PTT
+Version: 0.0.0.9000
+Date: 2015-02-24
+Author: Janne Huovari
+Maintainer: person("Janne", "Huovari", , "janne.huovari@ptt.fi", role = c("aut", "cre"))
+Description: Themes and ggplot2 functions for PTT
+License: What license is it under?
+Depends: ggplot2
+LazyData: TRUE
