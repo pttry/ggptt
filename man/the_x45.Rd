@@ -2,26 +2,30 @@
 % Please edit documentation in R/theme_incompletes.R
 \name{the_x45}
 \alias{the_legend_bot}
+\alias{the_title_blank}
 \alias{the_x45}
-\title{Convinient functions to set theme elements}
+\title{x-axis text in 45 angle}
 \usage{
 the_x45()
 
 the_legend_bot()
+
+the_title_blank(blanks = c("x", "y", "t", "l"))
+}
+\arguments{
+\item{blanks}{In \code{the_title_blank} a vector of initial for blank titles.
+A default is all titles: \code{c("x", "y", "t", "l")} for x-axis, y-axis, plot title and legend.}
 }
 \description{
+And othet convinient functions to set theme elements
+}
+\details{
 Shortcuts to modify theme elements with \code{\link{theme}}
 }
 \section{Functions}{
 \itemize{
-\item \code{the_legend_bot}: 
+\item \code{the_legend_bot}: legend.position = "bottom"
+
+\item \code{the_title_blank}: blank titles
 }}
-\section{Functions}{
-
-
-\tabular{ll}{
-   the_x45 \tab x-axis text in 45 angle \cr
-   the_legend_bot \tab legend.position = "bottom" \cr
- }
-}
 
