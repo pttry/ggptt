@@ -28,3 +28,18 @@ percent_comma <- function(x){
   x <- gsub("%", " %", x)
   x
 }
+
+
+#' Year formatter for a two-number format.
+#'
+#' Uses only 2 last numbers of the year.
+#'
+#' @param x a numeric vector to format
+#' @export
+#' @return a character vector
+#' @examples
+#'    p <- ggplot(economics, aes(x = date, y = pop))
+#'    p + geom_line() + scale_x_date(labels = no_century)
+no_century <- function(x){
+  substr(x, 3, 4)
+}

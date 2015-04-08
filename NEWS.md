@@ -4,6 +4,7 @@ ggptt 0.3.0
 * Nothing set on load anymore. Use `jtools` instead.
 * `geom_h0()` for horizontal line on y = 0.
 * `line_wrap()` to wrap lines for labels etc.
+* `no_century()` for two-number year labels.
 
 ggptt 0.2.0
 ===========
