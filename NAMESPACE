@@ -2,6 +2,7 @@
 
 export(deci_comma)
 export(geom_bari)
+export(geom_h0)
 export(percent_comma)
 export(ptt_pal)
 export(scale_color_ptt)

@@ -1,3 +1,9 @@
+ggptt 0.3.0
+===========
+
+* Nothing set on load anymore. Use `jtools` instead.
+* `geom_h0()` for horizontal line on y = 0.
+
 ggptt 0.2.0
 ===========
 
