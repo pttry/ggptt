@@ -33,6 +33,7 @@ percent_comma <- function(x){
 #' Year formatter for a two-number format.
 #'
 #' Uses only 2 last numbers of the year.
+#' \code{two_last()} is an alias.
 #'
 #' @param x a numeric vector to format
 #' @export
@@ -42,4 +43,20 @@ percent_comma <- function(x){
 #'    p + geom_line() + scale_x_date(labels = no_century)
 no_century <- function(x){
   substr(x, 3, 4)
+}
+
+#' @describeIn no_century
+#' @export
+two_last <- function(x){
+  no_century()
+}
+
+#' Reverse factors
+#'
+#' Revers factor levels. Useful to reorder scales.
+#'
+#' @param x A factor (or other vector)
+#' @export
+factor_rev <- function(x){
+  factor(x, rev(levels(x)))
 }

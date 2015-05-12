@@ -2,9 +2,12 @@
 % Please edit documentation in R/labellers.R
 \name{no_century}
 \alias{no_century}
+\alias{two_last}
 \title{Year formatter for a two-number format.}
 \usage{
 no_century(x)
+
+two_last(x)
 }
 \arguments{
 \item{x}{a numeric vector to format}
@@ -14,7 +17,12 @@ a character vector
 }
 \description{
 Uses only 2 last numbers of the year.
+\code{two_last()} is an alias.
 }
+\section{Functions}{
+\itemize{
+\item \code{two_last}: 
+}}
 \examples{
 p <- ggplot(economics, aes(x = date, y = pop))
    p + geom_line() + scale_x_date(labels = no_century)
