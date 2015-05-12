@@ -1,3 +1,9 @@
+ggptt 0.3.1
+============
+
+* Now returns factor for `line_wrap()` factors
+* `factor_rev()` to reverse factor levels.
+
 ggptt 0.3.0
 ===========
 
