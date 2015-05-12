@@ -2,9 +2,15 @@
 % Please edit documentation in R/line_wrap.R
 \name{line_wrap}
 \alias{line_wrap}
+\alias{line_wrap.default}
+\alias{line_wrap.factor}
 \title{Function to add new line charter to a character string}
 \usage{
 line_wrap(x, line_lenght = 40)
+
+\method{line_wrap}{default}(x, line_lenght = 40)
+
+\method{line_wrap}{factor}(x, line_lenght)
 }
 \arguments{
 \item{x}{A character string or vector.}
@@ -13,7 +19,14 @@ line_wrap(x, line_lenght = 40)
 }
 \description{
 Useful to wrap labels on several lines. Wrap on word breaks.
+A factor returs factor.
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{default}: 
+
+\item \code{factor}: 
+}}
 \examples{
 ggplot(mtcars, aes(x = wt, y=mpg)) + geom_point() +
   ggtitle(line_wrap("This is a unneccessary long example title to show
