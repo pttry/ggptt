@@ -1,3 +1,8 @@
+ggptt 0.3.2
+============
+
+* `set_ptt()` to set theme_ptt and ptt scales.
+
 ggptt 0.3.1
 ============
 
