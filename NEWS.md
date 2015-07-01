@@ -3,6 +3,7 @@ ggptt 0.3.2
 
 * `set_ptt()` to set theme_ptt and ptt scales.
 * `ggptt_pal()` for all color palettes in the package and a new palette "vnk".
+* `theme_ptt()` now sets first ptt colour as default for line.
   
 
 ggptt 0.3.1
