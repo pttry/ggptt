@@ -1,5 +1,7 @@
-ggptt 0.3.2.9000
+ggptt 0.3.3
 ================
+* vignette: Introduction
+* small doc fixes.
 
 
 ggptt 0.3.2

@@ -1,7 +1,7 @@
 Package: ggptt
 Type: Package
 Title: Themes and ggplot2 Functions for PTT
-Version: 0.3.2.9000
+Version: 0.3.3
 Date: 2015-07-01
 Authors@R: person("Janne", "Huovari", email = "janne.huovari@ptt.fi", role = c("aut", "cre"))
 Description: Themes and ggplot2 functions for use in PTT.
@@ -9,4 +9,8 @@ License: GPL-3
 Depends: ggplot2
 Imports: grid, scales
 LazyData: TRUE
-Suggests: testthat
+Suggests: testthat,
+    knitr,
+    dplyr,
+    tidyr
+VignetteBuilder: knitr
