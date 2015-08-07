@@ -25,7 +25,9 @@ ggptt_pal <- function(n, name){
     )
   cols <- pals[[name]]
   if (is.null(cols)) stop(name, " is not a valid palette name for ggptt_pal")
-  if (n > length(cols)) warning("n is greater than maximum number of ptt colours. Colours are recycled")
+  if (n > length(cols))
+    warning("n is greater than maximum number of colours in ", name,
+            "palette. Colours are recycled")
   col_seg <- rep(1:length(cols), times = ceiling(n/length(cols)))[1:n]
   cols[col_seg]
 }
