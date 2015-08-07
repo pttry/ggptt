@@ -1,8 +1,8 @@
-#' x-axis text in 45 angle
+#' Theme elements
 #'
-#' And othet convinient functions to set theme elements
+#' Convinient functions to set theme elements.
 #'
-#' Shortcuts to modify theme elements with \code{\link{theme}}
+#' Shortcuts to modify theme elements with \code{\link{theme}}.
 #'
 #' @param blanks In \code{the_title_blank} a vector of initial for blank titles.
 #' A default is all titles: \code{c("x", "y", "t", "l")} for x-axis, y-axis, plot title and legend.

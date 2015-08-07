@@ -4,7 +4,7 @@
 \alias{the_legend_bot}
 \alias{the_title_blank}
 \alias{the_x45}
-\title{x-axis text in 45 angle}
+\title{Theme elements}
 \usage{
 the_x45()
 
@@ -17,10 +17,10 @@ the_title_blank(blanks = c("x", "y", "t", "l"))
 A default is all titles: \code{c("x", "y", "t", "l")} for x-axis, y-axis, plot title and legend.}
 }
 \description{
-And othet convinient functions to set theme elements
+Convinient functions to set theme elements.
 }
 \details{
-Shortcuts to modify theme elements with \code{\link{theme}}
+Shortcuts to modify theme elements with \code{\link{theme}}.
 }
 \section{Functions}{
 \itemize{
