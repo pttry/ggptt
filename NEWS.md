@@ -1,6 +1,14 @@
+ggptt 0.3.3.9000
+================
+
+* `unset_ptt` to undo `set_ptt()`.
+* fixes to vingette.
+
+
 ggptt 0.3.3
 ================
-* vignette: Introduction
+
+* vignette: Introduction.
 * small doc fixes.
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to ggtt"
+title: "Introduction to ggptt"
 author: "Janne Huovari"
 date: "`r Sys.Date()`"
 output: 
@@ -18,6 +18,9 @@ vignette: >
 library(ggptt)
 library(dplyr)
 library(tidyr)
+
+# to clear possible settings
+unset_ptt()
 
 pdat <- economics %>% 
   select(date, psavert, uempmed) %>% 
@@ -67,7 +70,8 @@ p + theme_ptt()
 
 ```
 
-`set_ptt()` sets PTT theme and colours
+`set_ptt()` sets PTT theme and colours. `usset_ptt()` could be used to undo 
+ggptt settings.
 
 ```{r set_ptt}
 
