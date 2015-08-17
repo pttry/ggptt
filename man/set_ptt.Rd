@@ -2,9 +2,12 @@
 % Please edit documentation in R/set.R
 \name{set_ptt}
 \alias{set_ptt}
+\alias{unset_ptt}
 \title{Set PTT theme and scales}
 \usage{
 set_ptt()
+
+unset_ptt()
 }
 \description{
 Set \code{\link{theme_ptt}}, see \code{\link[ggplot2]{theme_set}}, and
@@ -14,7 +17,13 @@ and
 }
 \details{
 Scales are assign in \code{ggptt_sets} environment.
+`unset_ptt()` is used to restore theme and scales berofe
+`set_ptt()`.
 }
+\section{Functions}{
+\itemize{
+\item \code{unset_ptt}: 
+}}
 \examples{
 l_df <- data.frame(t = c(1,2,3), y = c(4,3,5, 5,7,6), cc = c(1,1,1,2,2,2))
 ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()

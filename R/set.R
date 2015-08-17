@@ -6,6 +6,8 @@
 #' \code{\link{scale_fill_ptt}} as \code{\link[ggplot2]{scale_fill_discrete}}
 #'
 #' Scales are assign in \code{ggptt_sets} environment.
+#' `unset_ptt()` is used to restore theme and scales berofe
+#' `set_ptt()`.
 #'
 #' @export
 #' @examples
@@ -13,21 +15,40 @@
 #' ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
 #' set_ptt()
 #' ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
-
-
-
 set_ptt <- function() {
+  # environment for sets
+  if (!("ggptt_sets" %in% search())) {
+    e <- new.env()
+    attach(e, name = "ggptt_sets", warn.conflicts = FALSE)
+  }
+
+
   # theme
-  ggplot2::theme_set(theme_ptt())
+  old_theme <- ggplot2::theme_set(theme_ptt())
+  assign("old_theme", old_theme,
+         pos = "ggptt_sets")
 
   # defaults for scales
-  e <- new.env()
 
-  e$scale_colour_discrete <- function(...) scale_colour_ptt(...)
-  e$scale_fill_discrete <- function(...) scale_fill_ptt(...)
+  scale_colour_discrete <- function(...) scale_colour_ptt(...)
+  scale_fill_discrete <- function(...) scale_fill_ptt(...)
 
-  attach(e, name = "ggptt_sets", warn.conflicts = FALSE)
+  assign("scale_colour_discrete", scale_colour_discrete,
+         pos = "ggptt_sets")
+  assign("scale_fill_discrete", scale_fill_discrete,
+         pos = "ggptt_sets")
 
+}
+
+
+#' @describeIn set_ptt
+#' @export
+unset_ptt <- function(){
+  if (("ggptt_sets" %in% search())){
+    theme_set(get("old_theme", "ggptt_sets"))
+    detach("ggptt_sets")
+    message("ggptt unset.")
+  }
 }
 
 
