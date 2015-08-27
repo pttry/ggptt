@@ -1,7 +1,8 @@
-ggptt 0.3.3.9000
+ggptt 0.3.3.9002
 ================
 
 * `unset_ptt` to undo `set_ptt()`.
+* `set_gg()` and `unset_gg()` for general setting theme and scales
 * fixes to vingette.
 
 
