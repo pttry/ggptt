@@ -9,7 +9,7 @@ ggptt_pal(n, name)
 \arguments{
 \item{n}{A number of colour needed.}
 
-\item{name}{A name of the palette.}
+\item{name}{A name of the palette. See \code{names(ggptt_palettes)}.}
 }
 \description{
 Color palettes in ggptt package (discrete).

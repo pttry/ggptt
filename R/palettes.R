@@ -7,7 +7,7 @@
 #' Available palettes are: ptt, vnk.
 #'
 #' @param n A number of colour needed.
-#' @param name A name of the palette.
+#' @param name A name of the palette. See \code{names(ggptt_palettes)}.
 #' @export
 #' @family ggptt_pal
 #' @examples
@@ -15,15 +15,7 @@
 #'  scales::show_col(ggptt_pal(n = 6, name = "vnk"))
 
 ggptt_pal <- function(n, name){
-  pals <- list(
-    ptt = c("darkolivegreen4", "cornflowerblue", "darkorange2",
-            "coral4", "mediumpurple3", "grey50"),
-    vnk = c(rgb(0, 111, 185, maxColorValue = 255),
-            rgb(10, 187, 236, maxColorValue = 255),
-            rgb(122, 136, 144, maxColorValue = 255),
-            "black")
-    )
-  cols <- pals[[name]]
+  cols <- ggptt_palettes[[name]]
   if (is.null(cols)) stop(name, " is not a valid palette name for ggptt_pal")
   if (n > length(cols))
     warning("n is greater than maximum number of colours in ", name,
@@ -31,6 +23,7 @@ ggptt_pal <- function(n, name){
   col_seg <- rep(1:length(cols), times = ceiling(n/length(cols)))[1:n]
   cols[col_seg]
 }
+
 
 
 #' Color palette PTT.
@@ -66,3 +59,11 @@ ptt_pal <- function(n){
 vnk_pal <- function(n){
   ggptt_pal(n, "vnk")
 }
+
+
+#' Palettes in ggptt
+#'
+#' A named list of colours.
+#'
+#' See \code{names(ggptt_palettes)}.
+"ggptt_palettes"
