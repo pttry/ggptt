@@ -14,4 +14,9 @@ theme_ptt(base_size = 12, base_family = "")
 \description{
 Theme PTT. Based on \code{\link{theme_bw}}. geom defaults from \code{\link{ptt_pal}}
 }
+\examples{
+p <- ggplot(mtcars, aes(mpg, wt)) + geom_point()
+p
+p + theme_ptt()
+}
 

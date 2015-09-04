@@ -59,9 +59,10 @@ set_ptt <- function() {
 #' @family set
 #' @examples
 #' l_df <- data.frame(t = c(1,2,3), y = c(4,3,5, 5,7,6), cc = c(1,1,1,2,2,2))
-#' ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
+#' p <- ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
+#' p
 #' set_gg(theme_ptt(), "ptt")
-#' ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
+#' p
 set_gg <- function(theme, palette) {
   # environment for sets
   if (!("ggptt_sets" %in% search())) {
@@ -91,6 +92,8 @@ set_gg <- function(theme, palette) {
     function(...) discrete_scale("fill", "ggptt", pal, ...)
 
   assign("scale_colour_discrete", scale_colour_discrete,
+         pos = "ggptt_sets")
+  assign("scale_color_discrete", scale_colour_discrete,
          pos = "ggptt_sets")
   assign("scale_fill_discrete", scale_fill_discrete,
          pos = "ggptt_sets")
