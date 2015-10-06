@@ -1,6 +1,7 @@
 ggptt 0.3.3.9003
 ================
 
+* `grid_arrange_shared_legend()` to share legend for multiple plots.
 * `unset_ptt` to undo `set_ptt()`.
 * `set_gg()` and `unset_gg()` for general setting theme and scales
 * fixes to vingette.
