@@ -101,7 +101,7 @@ set_gg <- function(theme, palette) {
 }
 
 
-#' @describeIn set_ptt
+#' @describeIn set_ptt Unset PTT theme and scales
 #' @export
 unset_ptt <- function(){
   if (("ggptt_sets" %in% search())){
@@ -111,7 +111,7 @@ unset_ptt <- function(){
   }
 }
 
-#' @describeIn set_gg
+#' @describeIn set_gg Unset theme and scales
 #' @export
 unset_gg <- function(){
   if (("ggptt_sets" %in% search())){

@@ -45,7 +45,7 @@ no_century <- function(x){
   substr(x, 3, 4)
 }
 
-#' @describeIn no_century
+#' @rdname no_century
 #' @export
 two_last <- function(x){
   no_century()

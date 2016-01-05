@@ -1,6 +1,6 @@
-#' PTT colour scales
+#' PTT colour and fill scale
 #'
-#' Discrete PTT colour scales. Colours for \code{\link{ptt_pal}}.
+#' Discrete PTT colour scale. Colours from \code{\link{ptt_pal}}.
 #'
 #' @param ... Other arguments passed on to \code{\link{discrete_scale}}.
 #' @export
@@ -14,13 +14,13 @@ scale_fill_ptt <- function(...){
   discrete_scale("fill", "ptt", ptt_pal, ...)
 }
 
-#' @describeIn scale_fill_ptt
+#' @rdname scale_fill_ptt
 #' @export
 scale_colour_ptt <- function(...){
   discrete_scale("colour", "ptt", ptt_pal, ...)
 }
 
-#' @describeIn scale_fill_ptt
+#' @rdname scale_fill_ptt
 #' @export
 scale_color_ptt <- function(...){
   discrete_scale("colour", "ptt", ptt_pal, ...)

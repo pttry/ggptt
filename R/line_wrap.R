@@ -14,7 +14,7 @@ line_wrap <- function(x, line_lenght = 40){
   UseMethod("line_wrap", x)
   }
 
-#' @describeIn line_wrap
+#' @rdname line_wrap
 #' @export
 line_wrap.default <- function(x, line_lenght = 40){
   x <- gsub(paste('(.{1,', line_lenght, '})(\\s|$)', sep = ""), '\\1\n', x)
@@ -22,7 +22,7 @@ line_wrap.default <- function(x, line_lenght = 40){
   x
 }
 
-#' @describeIn line_wrap
+#' @rdname line_wrap
 #' @export
 line_wrap.factor <- function(x, line_lenght){
   y <- x
