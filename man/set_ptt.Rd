@@ -5,9 +5,12 @@
 \alias{unset_ptt}
 \title{Set PTT theme and scales}
 \usage{
-set_ptt()
+set_ptt(...)
 
 unset_ptt()
+}
+\arguments{
+\item{...}{arguments passed to \code{\link{theme_ptt}}}
 }
 \description{
 Set \code{\link{theme_ptt}}, see \code{\link[ggplot2]{theme_set}}, and

@@ -9,6 +9,8 @@
 #' `unset_ptt()` is used to restore theme and scales berofe
 #' `set_ptt()`.
 #'
+#' @param ... arguments passed to \code{\link{theme_ptt}}
+#'
 #' @export
 #' @family set
 #' @examples
@@ -16,7 +18,7 @@
 #' ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
 #' set_ptt()
 #' ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
-set_ptt <- function() {
+set_ptt <- function(...) {
   # environment for sets
   if (!("ggptt_sets" %in% search())) {
     e <- new.env()
@@ -25,7 +27,7 @@ set_ptt <- function() {
 
 
   # theme
-  old_theme <- ggplot2::theme_set(theme_ptt())
+  old_theme <- ggplot2::theme_set(theme_ptt(...))
   assign("old_theme", old_theme,
          pos = "ggptt_sets")
 
