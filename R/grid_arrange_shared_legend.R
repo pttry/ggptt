@@ -5,7 +5,7 @@
 #' @export
 #' @return grop and should be plot with \code{\link[grid]{grid.draw}}
 #' @author Shaun Jackman and Janne Huovari
-#' @seealso \link{https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs}
+#' @seealso \url{https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs}
 #' @examples
 #' dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
 #' p1 <- qplot(carat, price, data=dsamp, colour=clarity)

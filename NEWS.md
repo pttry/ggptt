@@ -1,4 +1,4 @@
-ggptt 0.3.3.9003
+ggptt 0.4.0
 ================
 
 * `grid_arrange_shared_legend()` to share legend for multiple plots.

@@ -13,18 +13,25 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+Prepartions for introduction:
+
 ```{r init, message=FALSE}
+
+# Install and load packages
+
+# install.packages(c("ggptt", "dplyr", "tidyr", "scales"))
 
 library(ggptt)
 library(dplyr)
-library(tidyr)
 
-# to clear possible settings
+
+# Clear possible settings
 unset_ptt()
 
+# data for examples
 pdat <- economics %>% 
   select(date, psavert, uempmed) %>% 
-  gather(vars, values, -date)
+  tidyr::gather(vars, values, -date)
   
 
 ```
@@ -70,7 +77,7 @@ p + theme_ptt()
 
 ```
 
-`set_ptt()` sets PTT theme and colours. `usset_ptt()` could be used to undo 
+`set_ptt()` sets PTT theme and colours. `unset_ptt()` could be used to undo 
 ggptt settings.
 
 ```{r set_ptt}

@@ -1,8 +1,8 @@
 Package: ggptt
 Type: Package
 Title: Themes and ggplot2 Functions for PTT
-Version: 0.3.3.9004
-Date: 2015-10-06
+Version: 0.4.0
+Date: 2016-04-12
 Authors@R: person("Janne", "Huovari", email = "janne.huovari@ptt.fi", role = c("aut", "cre"))
 Description: Themes and ggplot2 functions for use in PTT.
 License: GPL-3

@@ -29,6 +29,6 @@ grid_arrange_shared_legend(p1, p2, p3, p4, ncol = 2)
 Shaun Jackman and Janne Huovari
 }
 \seealso{
-\link{https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs}
+\url{https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs}
 }
 
