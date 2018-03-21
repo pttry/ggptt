@@ -14,4 +14,3 @@ theme_map(base_size = 12, base_family = "")
 \description{
 Theme for maps
 }
-

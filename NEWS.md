@@ -1,3 +1,8 @@
+ggptt 0.4.2
+================
+
+* Extra colours for a ptt-palette and a new ptt_new palette.
+
 ggptt 0.4.0
 ================
 

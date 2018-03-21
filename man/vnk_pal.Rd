@@ -23,4 +23,3 @@ Recycled if needed (with warning).
 Other ggptt_pal: \code{\link{ggptt_pal}},
   \code{\link{ptt_pal}}
 }
-

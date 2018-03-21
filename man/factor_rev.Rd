@@ -12,4 +12,3 @@ factor_rev(x)
 \description{
 Revers factor levels. Useful to reorder scales.
 }
-

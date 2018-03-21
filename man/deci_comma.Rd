@@ -18,4 +18,3 @@ Comma decimal formatter: Decimal separator comma.
 \examples{
 deci_comma(runif(10, 1, 10)/100)
 }
-

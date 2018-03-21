@@ -14,4 +14,3 @@ geom_bari(position = "dodge", ...)
 \description{
 Bars with stat identity
 }
-

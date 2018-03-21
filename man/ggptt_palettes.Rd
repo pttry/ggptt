@@ -15,4 +15,3 @@ A named list of colours.
 See \code{names(ggptt_palettes)}.
 }
 \keyword{datasets}
-

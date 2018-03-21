@@ -23,4 +23,3 @@ Uses only 2 last numbers of the year.
    p <- ggplot(economics, aes(x = date, y = pop))
    p + geom_line() + scale_x_date(labels = no_century)
 }
-

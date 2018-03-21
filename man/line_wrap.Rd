@@ -26,4 +26,3 @@ ggplot(mtcars, aes(x = wt, y=mpg)) + geom_point() +
   ggtitle(line_wrap("This is a unneccessary long example title to show
   how line_wrap function works"))
 }
-

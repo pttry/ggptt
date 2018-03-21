@@ -25,10 +25,9 @@ p3 <- qplot(color, price, data=dsamp, colour=clarity)
 p4 <- qplot(depth, price, data=dsamp, colour=clarity)
 grid_arrange_shared_legend(p1, p2, p3, p4, ncol = 2)
 }
-\author{
-Shaun Jackman and Janne Huovari
-}
 \seealso{
 \url{https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs}
 }
-
+\author{
+Shaun Jackman and Janne Huovari
+}

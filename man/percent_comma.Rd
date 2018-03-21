@@ -19,4 +19,3 @@ addition to scales \code{\link{percent}}
 \examples{
 percent_comma(runif(10, 1, 10)/100)
 }
-
