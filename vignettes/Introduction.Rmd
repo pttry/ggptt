@@ -136,3 +136,11 @@ grid_arrange_shared_legend(p, p + geom_h0(), ncol = 2)
 
 ```
 
+## Add extra breaks to a continuous scale
+
+```{r extra_break}
+
+p + scale_y_continuous(breaks = extra_breaks(17))
+
+```
+

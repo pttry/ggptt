@@ -13,10 +13,10 @@ unset_ptt()
 \item{...}{arguments passed to \code{\link{theme_ptt}}}
 }
 \description{
-Set \code{\link{theme_ptt}}, see \code{\link[ggplot2]{theme_set}}, and
-\code{\link{scale_colour_ptt}} as \code{\link[ggplot2]{scale_colour_discrete}}
+Set \code{\link{theme_ptt}}, see \code{\link[ggplot2:theme_get]{theme_set}}, and
+\code{\link{scale_colour_ptt}} as \code{\link[ggplot2:scale_discrete]{scale_colour_discrete}}
 and
-\code{\link{scale_fill_ptt}} as \code{\link[ggplot2]{scale_fill_discrete}}
+\code{\link{scale_fill_ptt}} as \code{\link[ggplot2:scale_discrete]{scale_fill_discrete}}
 }
 \details{
 Scales are assign in \code{ggptt_sets} environment.

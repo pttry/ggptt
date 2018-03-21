@@ -1,9 +1,9 @@
 #' Set PTT theme and scales
 #'
-#' Set \code{\link{theme_ptt}}, see \code{\link[ggplot2]{theme_set}}, and
-#' \code{\link{scale_colour_ptt}} as \code{\link[ggplot2]{scale_colour_discrete}}
+#' Set \code{\link{theme_ptt}}, see \code{\link[ggplot2:theme_get]{theme_set}}, and
+#' \code{\link{scale_colour_ptt}} as \code{\link[ggplot2:scale_discrete]{scale_colour_discrete}}
 #' and
-#' \code{\link{scale_fill_ptt}} as \code{\link[ggplot2]{scale_fill_discrete}}
+#' \code{\link{scale_fill_ptt}} as \code{\link[ggplot2:scale_discrete]{scale_fill_discrete}}
 #'
 #' Scales are assign in \code{ggptt_sets} environment.
 #' `unset_ptt()` is used to restore theme and scales berofe
@@ -12,6 +12,7 @@
 #' @param ... arguments passed to \code{\link{theme_ptt}}
 #'
 #' @export
+#' @import ggplot2
 #' @family set
 #' @examples
 #' l_df <- data.frame(t = c(1,2,3), y = c(4,3,5, 5,7,6), cc = c(1,1,1,2,2,2))
@@ -45,7 +46,7 @@ set_ptt <- function(...) {
 
 #' Set theme and scales
 #'
-#' Set theme, see \code{\link[ggplot2]{theme_set}} and set scales
+#' Set theme, see \code{\link[ggplot2:theme_get]{theme_set}} and set scales
 #' \code{\link{scale_colour_ptt}}
 #' and
 #' \code{\link{scale_fill_ptt}} to use palette.

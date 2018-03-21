@@ -2,6 +2,7 @@ ggptt 0.4.2
 ================
 
 * Extra colours for a ptt-palette and a new ptt_new palette.
+* `extra_breaks()` to add extra breaks to default breaks of scale_continuous
 
 ggptt 0.4.0
 ================

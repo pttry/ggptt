@@ -16,7 +16,7 @@ unset_gg()
 See \code{names(ggptt_palettes)}.}
 }
 \description{
-Set theme, see \code{\link[ggplot2]{theme_set}} and set scales
+Set theme, see \code{\link[ggplot2:theme_get]{theme_set}} and set scales
 \code{\link{scale_colour_ptt}}
 and
 \code{\link{scale_fill_ptt}} to use palette.
