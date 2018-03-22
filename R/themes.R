@@ -12,6 +12,7 @@
 
 theme_ptt <- function(base_size = 12, base_family = ""){
   update_geom_defaults("bar", list(fill = ptt_pal(1)))
+  update_geom_defaults("col", list(fill = ptt_pal(1)))
   update_geom_defaults("point", list(size = 4, colour = ptt_pal(1)))
   update_geom_defaults("text", list(size = 4, colour = ptt_pal(1)))
   update_geom_defaults("line", list(size = 1.5, colour = ptt_pal(1)))

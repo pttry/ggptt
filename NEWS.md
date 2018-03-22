@@ -1,3 +1,7 @@
+ggptt 0.4.3
+
+* PTT default colour to geom_col
+
 ggptt 0.4.2
 ================
 
