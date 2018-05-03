@@ -2,7 +2,7 @@
 % Please edit documentation in R/breaks.R
 \name{extra_breaks}
 \alias{extra_breaks}
-\title{Add extra breaks to continuous scale}
+\title{Add extra breaks to a continuous scale}
 \usage{
 extra_breaks(extras)
 }
