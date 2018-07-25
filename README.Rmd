@@ -1,0 +1,36 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r readme_init, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+# ggptt
+
+A collection of ggplot2 themes and functions for use in (PTT)[http://www.ptt.fi/].
+
+## installation
+
+Install from github:
+
+```{r install}
+
+# install.packages("devtools")
+devtools::install_github("pttry/ggptt")
+
+```
+
+# Introduction to ggptt
+
+```{r child="vignettes/Introduction.Rmd"}
+
+```

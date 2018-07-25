@@ -39,7 +39,7 @@ pdat <- economics %>%
 
 `ggptt` will also load `ggplot2`.
 
-# PTT colours
+## PTT colours
 
 ### PTT colours: `ptt_pal()`
 
