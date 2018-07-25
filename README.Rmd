@@ -22,7 +22,7 @@ A collection of ggplot2 themes and functions for use in (PTT)[http://www.ptt.fi/
 
 Install from github:
 
-```{r install}
+```{r install, eval=FALSE}
 
 # install.packages("devtools")
 devtools::install_github("pttry/ggptt")
