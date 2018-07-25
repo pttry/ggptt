@@ -144,3 +144,7 @@ p + scale_y_continuous(breaks = extra_breaks(17))
 
 ```
 
+## Additional functions
+
+* `halfq_shift()` to shift time a half quarter in quarter charts
+
