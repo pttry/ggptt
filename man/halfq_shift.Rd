@@ -12,3 +12,7 @@ halfq_shift(x)
 \description{
 Used to shift time a half quarter in quarter charts
 }
+\examples{
+halfq_shift(as.Date(c("2018-01-01", "2018-04-01")))
+
+}

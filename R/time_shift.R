@@ -4,8 +4,14 @@
 #'
 #' @param x a Date vector to shift
 #'
+#' @import lubridate
+#'
 #' @export
+#' @examples
+#' halfq_shift(as.Date(c("2018-01-01", "2018-04-01")))
 #'
 halfq_shift <- function(x){
-  x + lubridate::months(1) + lubridate::days(14)
+  x + months(1) + lubridate::days(14)
 }
+
+
