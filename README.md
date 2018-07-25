@@ -2,7 +2,7 @@
 ggptt
 =====
 
-A collection of ggplot2 themes and functions for use in (PTT)\[<http://www.ptt.fi/>\].
+A collection of ggplot2 themes and functions for use in [PTT](http://www.ptt.fi/).
 
 installation
 ------------
@@ -13,9 +13,6 @@ Install from github:
 
 # install.packages("devtools")
 devtools::install_github("pttry/ggptt")
-#> Downloading GitHub repo pttry/ggptt@master
-#> from URL https://api.github.com/repos/pttry/ggptt/zipball/master
-#> Installation failed: Not Found (404)
 ```
 
 Introduction to ggptt

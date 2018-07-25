@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 # ggptt
 
-A collection of ggplot2 themes and functions for use in (PTT)[http://www.ptt.fi/].
+A collection of ggplot2 themes and functions for use in [PTT](http://www.ptt.fi/).
 
 ## installation
 
