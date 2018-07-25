@@ -7,5 +7,5 @@
 #' @export
 #'
 halfq_shift <- function(x){
-  x + months(1) + days(14)
+  x + lubridate::months(1) + lubridate::days(14)
 }
