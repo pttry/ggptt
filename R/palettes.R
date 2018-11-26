@@ -66,4 +66,6 @@ vnk_pal <- function(n){
 #' A named list of colours.
 #'
 #' See \code{names(ggptt_palettes)}.
+#' @export
+#'
 "ggptt_palettes"
