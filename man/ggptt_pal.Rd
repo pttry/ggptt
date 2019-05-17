@@ -27,3 +27,4 @@ Available palettes are: ptt, vnk.
 Other ggptt_pal: \code{\link{ptt_pal}},
   \code{\link{vnk_pal}}
 }
+\concept{ggptt_pal}

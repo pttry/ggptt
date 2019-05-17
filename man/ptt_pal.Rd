@@ -23,3 +23,4 @@ Recycled if needed (with warning).
 Other ggptt_pal: \code{\link{ggptt_pal}},
   \code{\link{vnk_pal}}
 }
+\concept{ggptt_pal}

@@ -37,3 +37,4 @@ ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()
 \seealso{
 Other set: \code{\link{set_gg}}
 }
+\concept{set}
