@@ -6,7 +6,7 @@
 #'
 #' Available palettes are: ptt, vnk.
 #'
-#' @param n A number of colour needed.
+#' @param n A number of colour needed. NULL (default) return all available.
 #' @param name A name of the palette. See \code{names(ggptt_palettes)}.
 #' @export
 #' @family ggptt_pal
@@ -14,9 +14,10 @@
 #'  scales::show_col(ggptt_pal(n = 6, name = "ptt"))
 #'  scales::show_col(ggptt_pal(n = 6, name = "vnk"))
 
-ggptt_pal <- function(n, name){
+ggptt_pal <- function(n = NULL, name){
   cols <- ggptt_palettes[[name]]
   if (is.null(cols)) stop(name, " is not a valid palette name for ggptt_pal")
+  if (is.null(n)) n <- length(cols)
   if (n > length(cols))
     warning("n is greater than maximum number of colours in ", name,
             "palette. Colours are recycled")
@@ -39,7 +40,7 @@ ggptt_pal <- function(n, name){
 #' @examples
 #'  scales::show_col(ptt_pal(6))
 
-ptt_pal <- function(n){
+ptt_pal <- function(n = NULL){
   ggptt_pal(n, "ptt")
 }
 
@@ -56,7 +57,7 @@ ptt_pal <- function(n){
 #' @examples
 #'  scales::show_col(vnk_pal(6))
 
-vnk_pal <- function(n){
+vnk_pal <- function(n = NULL){
   ggptt_pal(n, "vnk")
 }
 
