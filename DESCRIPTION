@@ -1,7 +1,7 @@
 Package: ggptt
 Type: Package
 Title: Themes and ggplot2 Functions for PTT
-Version: 1.1.0
+Version: 1.2.1
 Authors@R: person("Janne", "Huovari", email = "janne.huovari@ptt.fi", role = c("aut", "cre"))
 Description: A collection of ggplot2 themes and functions for use in PTT.
 License: GPL-3
@@ -9,16 +9,18 @@ Depends:
     R (>= 2.10),
     ggplot2
 Imports:
+    dplyr,
+    tidyr,
+    rlang,
     grid,
     scales,
     gridExtra,
-    lubridate
+    lubridate,
+    highcharter
 LazyData: TRUE
 Suggests:
     testthat,
-    knitr,
-    dplyr,
-    tidyr
+    knitr
 Encoding: UTF-8
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1

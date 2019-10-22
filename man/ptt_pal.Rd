@@ -4,7 +4,7 @@
 \alias{ptt_pal}
 \title{Color palette PTT.}
 \usage{
-ptt_pal(n)
+ptt_pal(n = NULL)
 }
 \arguments{
 \item{n}{A number of colour needed.}

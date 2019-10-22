@@ -4,7 +4,7 @@
 \alias{vnk_pal}
 \title{Color palette VNK.}
 \usage{
-vnk_pal(n)
+vnk_pal(n = NULL)
 }
 \arguments{
 \item{n}{A number of colour needed.}

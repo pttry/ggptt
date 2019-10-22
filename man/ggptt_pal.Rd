@@ -4,10 +4,10 @@
 \alias{ggptt_pal}
 \title{Color palettes in ggptt package.}
 \usage{
-ggptt_pal(n, name)
+ggptt_pal(n = NULL, name)
 }
 \arguments{
-\item{n}{A number of colour needed.}
+\item{n}{A number of colour needed. NULL (default) return all available.}
 
 \item{name}{A name of the palette. See \code{names(ggptt_palettes)}.}
 }

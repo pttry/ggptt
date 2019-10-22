@@ -1,3 +1,9 @@
+ggplot 1.2.0 
+============
+
+* Helper functions to plot highchart plots
+
+
 ggplot 1.1.0
 ============
 
