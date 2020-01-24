@@ -4,7 +4,7 @@
 \name{ggptt_palettes}
 \alias{ggptt_palettes}
 \title{Palettes in ggptt}
-\format{An object of class \code{list} of length 3.}
+\format{An object of class \code{list} of length 2.}
 \usage{
 ggptt_palettes
 }
