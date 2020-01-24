@@ -20,7 +20,8 @@ Recycled if needed (with warning).
  scales::show_col(vnk_pal(6))
 }
 \seealso{
-Other ggptt_pal: \code{\link{ggptt_pal}},
-  \code{\link{ptt_pal}}
+Other ggptt_pal: 
+\code{\link{ggptt_pal}()},
+\code{\link{ptt_pal}()}
 }
 \concept{ggptt_pal}

@@ -39,6 +39,7 @@ set_gg(theme_ptt(), "ptt")
 p
 }
 \seealso{
-Other set: \code{\link{set_ptt}}
+Other set: 
+\code{\link{set_ptt}()}
 }
 \concept{set}

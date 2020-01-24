@@ -25,13 +25,13 @@ hc_theme_ptt <- function(){
 #' @param xaxis a x-axis variable.
 #' @param values a data variable.
 #' @param highlight a sting, subset of group to highlight.
+#' @param theme a theme to use.
 #'
 #' @export
 #' @examples
-#'   pdat <- economics %>%
-#'     select(date, psavert, uempmed) %>%
-#'     mutate(uempmed2 = uempmed + 1) %>%
-#'     tidyr::gather(vars, values, -date)
+#'   pdat <- dplyr::select(economics, date, psavert, uempmed)
+#'   pdat <- dplyr::mutate(pdat, uempmed2 = uempmed + 1)
+#'   pdat <- tidyr::gather(pdat, vars, values, -date)
 #'
 #'   hcptt_hl_linechart(pdat, group = vars, xaxis = date,
 #'   values = values, highlight = c("uempmed", "uempmed2"))

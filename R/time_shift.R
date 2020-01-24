@@ -4,7 +4,6 @@
 #'
 #' @param x a Date vector to shift
 #'
-#' @import lubridate
 #'
 #' @export
 #' @examples

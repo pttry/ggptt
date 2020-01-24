@@ -24,7 +24,8 @@ Available palettes are: ptt, vnk.
  scales::show_col(ggptt_pal(n = 6, name = "vnk"))
 }
 \seealso{
-Other ggptt_pal: \code{\link{ptt_pal}},
-  \code{\link{vnk_pal}}
+Other ggptt_pal: 
+\code{\link{ptt_pal}()},
+\code{\link{vnk_pal}()}
 }
 \concept{ggptt_pal}

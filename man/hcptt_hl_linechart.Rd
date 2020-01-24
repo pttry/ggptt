@@ -4,8 +4,14 @@
 \alias{hcptt_hl_linechart}
 \title{PTT highcharts lineplot with highlihted series.}
 \usage{
-hcptt_hl_linechart(data, group, xaxis, values, highlight,
-  theme = hc_theme_ptt())
+hcptt_hl_linechart(
+  data,
+  group,
+  xaxis,
+  values,
+  highlight,
+  theme = hc_theme_ptt()
+)
 }
 \arguments{
 \item{data}{a data.frame}
@@ -17,15 +23,16 @@ hcptt_hl_linechart(data, group, xaxis, values, highlight,
 \item{values}{a data variable.}
 
 \item{highlight}{a sting, subset of group to highlight.}
+
+\item{theme}{a theme to use.}
 }
 \description{
 data modification is done internally by \code{\link{hcptt_prepare_line_data}}.
 }
 \examples{
-  pdat <- economics \%>\%
-    select(date, psavert, uempmed) \%>\%
-    mutate(uempmed2 = uempmed + 1) \%>\%
-    tidyr::gather(vars, values, -date)
+  pdat <- dplyr::select(economics, date, psavert, uempmed)
+  pdat <- dplyr::mutate(pdat, uempmed2 = uempmed + 1)
+  pdat <- tidyr::gather(pdat, vars, values, -date)
 
   hcptt_hl_linechart(pdat, group = vars, xaxis = date,
   values = values, highlight = c("uempmed", "uempmed2"))

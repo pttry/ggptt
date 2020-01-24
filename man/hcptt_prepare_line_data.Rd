@@ -24,12 +24,11 @@ a list of 2 with xAxis and series (a list).
 Prepare data for a costumised highcharts line plot. The data in long format.
 }
 \examples{
-  pdat <- economics \%>\%
-    select(date, psavert, uempmed) \%>\%
-    mutate(uempmed2 = uempmed + 1) \%>\%
-    tidyr::gather(vars, values, -date)
+  pdat <- dplyr::select(economics, date, psavert, uempmed)
+  pdat <- dplyr::mutate(pdat, uempmed2 = uempmed + 1)
+  pdat <- tidyr::gather(pdat, vars, values, -date)
 
-  hcptt_prepare_line_data(pdat, group = vars, xaxis = date,
-  values = values, highlight = "psavert") \%>\% head()
+  head(hcptt_prepare_line_data(pdat, group = vars, xaxis = date,
+  values = values, highlight = "psavert"))
 
 }

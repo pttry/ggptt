@@ -9,17 +9,17 @@
 #' @param highlight a sting, subset of group to highlight.
 #'
 #' @import dplyr rlang
+#' @export
 #'
 #' @return a list of 2 with xAxis and series (a list).
 #'
 #' @examples
-#'   pdat <- economics %>%
-#'     select(date, psavert, uempmed) %>%
-#'     mutate(uempmed2 = uempmed + 1) %>%
-#'     tidyr::gather(vars, values, -date)
+#'   pdat <- dplyr::select(economics, date, psavert, uempmed)
+#'   pdat <- dplyr::mutate(pdat, uempmed2 = uempmed + 1)
+#'   pdat <- tidyr::gather(pdat, vars, values, -date)
 #'
-#'   hcptt_prepare_line_data(pdat, group = vars, xaxis = date,
-#'   values = values, highlight = "psavert") %>% head()
+#'   head(hcptt_prepare_line_data(pdat, group = vars, xaxis = date,
+#'   values = values, highlight = "psavert"))
 #'
 
 
