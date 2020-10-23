@@ -1,20 +1,27 @@
-ggplot 1.2.0 
+ggptt 1.2.4
+===========
+
+* `ggsave_twitter()` to save plots for twitter.
+
+
+ggptt 1.2.0 
 ============
 
-* Helper functions to plot highchart plots
+* Helper functions to plot highchart plots.
 
 
-ggplot 1.1.0
+ggptt 1.1.0
 ============
 
 * `halfq_shift()` to shift time a half quarter in quarter charts.
 
-ggplot 1.0.0
+ggptt 1.0.0
 ============
 
 * To github
 
 ggptt 0.4.3
+===========
 
 * PTT default colour to geom_col
 

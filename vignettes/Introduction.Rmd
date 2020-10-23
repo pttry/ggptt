@@ -148,3 +148,7 @@ p + scale_y_continuous(breaks = extra_breaks(17))
 
 * `halfq_shift()` to shift time a half quarter in quarter charts
 
+## Saving shorcuts
+
+* `ggsave_twitter()` to save plots for twitter.
+
