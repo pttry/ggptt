@@ -21,13 +21,22 @@
 #' pttdatahaku::ptt_read_data("tyonv_1001", "seutukunta") %>% ptt_draw_map(2020, "seutukunta", "TYOTOSUUS")
 #' pttdatahaku::ptt_read_data("tyonv_1001", "maakunta") %>% ptt_draw_map(2020, "maakunta", "TYOTOSUUS")
 #'
-ptt_draw_map <- function(data, vuosi, aluejako, x, time = max(data$time)) {
+ptt_draw_map <- function(data, vuosi = substring(max(data$time), 1,4), aluejako, x, time = max(data$time)) {
 
+  # Get a list of all available maps
   capabilities <- xml2::read_xml("https://geo.stat.fi/geoserver/tilastointialueet/wfs?service=WFS&version=2.0.0&request=GetCapabilities")
   map_names <- capabilities %>%
     xml2::xml_find_all("//wfs:FeatureType/wfs:Name") %>%
     xml2::xml_text()
-  file <- tail(grep(paste0("tilastointialueet:", aluejako), grep(vuosi, map_names, value = TRUE), value = TRUE), n = 1)
+
+  # Filter the required map from the list of all maps
+  file <- tail(grep(paste0("tilastointialueet:", tolower(aluejako)),
+                    grep(as.character(vuosi), map_names, value = TRUE),
+                    value = TRUE),
+               n = 1)
+
+  # Test if the search was successful
+  if(length(file) == 0) {stop("Map not found!")}
 
   url <- httr::parse_url("https://geo.stat.fi/geoserver/tilastointialueet/wfs")
   url$query <- list(service ="WFS",
@@ -38,10 +47,12 @@ ptt_draw_map <- function(data, vuosi, aluejako, x, time = max(data$time)) {
 
   prefix_name_key <- c("kunta" = "KU", "seutukunta" = "SK", "maakunta" = "MK", "suuralue" = "SA")
 
+  # Get map and modify region variable
   map <- sf::st_read(httr::build_url(url))
   map[[aluejako]] <- paste0(prefix_name_key[aluejako], map[[aluejako]])
   map <- dplyr::rename_with(map, ~paste0(aluejako, "_code"), aluejako)
 
+  # Filter required from the input data
   data <- dplyr::filter(data, tiedot_code == x, time == time) %>%
           tidyr::spread(tiedot_code, values)
 
