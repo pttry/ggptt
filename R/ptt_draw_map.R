@@ -12,20 +12,21 @@
 #' @param time
 #'
 #' @return figure
-#' @export
+#' @export dplyr
+#'
 #'
 #' @examples
 #'
-#' pttdatahaku::ptt_read_data("tyonv_1001", "maakunta") %>% ptt_draw_map(2020, "kmaaunta", "TYOTOSUUS")
+#' pttdatahaku::ptt_read_data("tyonv_1001", "kunta") %>% ptt_draw_map(2020, "kunta", "TYOTOSUUS")
 #' pttdatahaku::ptt_read_data("tyonv_1001", "seutukunta") %>% ptt_draw_map(2020, "seutukunta", "TYOTOSUUS")
 #' pttdatahaku::ptt_read_data("tyonv_1001", "maakunta") %>% ptt_draw_map(2020, "maakunta", "TYOTOSUUS")
 #'
 ptt_draw_map <- function(data, vuosi, aluejako, x, time = max(data$time)) {
 
-  capabilities <- read_xml("https://geo.stat.fi/geoserver/tilastointialueet/wfs?service=WFS&version=2.0.0&request=GetCapabilities")
+  capabilities <- xml2::read_xml("https://geo.stat.fi/geoserver/tilastointialueet/wfs?service=WFS&version=2.0.0&request=GetCapabilities")
   map_names <- capabilities %>%
-    xml_find_all("//wfs:FeatureType/wfs:Name") %>%
-    xml_text()
+    xml2::xml_find_all("//wfs:FeatureType/wfs:Name") %>%
+    xml2::xml_text()
   file <- tail(grep(paste0("tilastointialueet:", aluejako), grep(vuosi, map_names, value = TRUE), value = TRUE), n = 1)
 
   url <- httr::parse_url("https://geo.stat.fi/geoserver/tilastointialueet/wfs")
@@ -45,7 +46,7 @@ ptt_draw_map <- function(data, vuosi, aluejako, x, time = max(data$time)) {
           tidyr::spread(tiedot_code, values)
 
   output <- map %>%
-             left_join(data, by = paste0(aluejako, "_code")) %>%
+             dplyr::left_join(data, by = paste0(aluejako, "_code")) %>%
              ggplot(aes_string(fill = x)) + geom_sf()
   output
 }
