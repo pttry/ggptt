@@ -18,21 +18,31 @@
 #' @examples
 #'
 #' pttdatahaku::ptt_read_data("tyonv_1001", "kunta") %>%
-#'      ptt_draw_map(2020, "kunta", "TYOTOSUUS")
+#'      ptt_draw_map(2020, aluejako = "kunta",  x =  "TYOTOSUUS")
 #' pttdatahaku::ptt_read_data("tyonv_1001", "seutukunta") %>%
 #'      ptt_draw_map(2020, "seutukunta", "TYOTOSUUS")
 #' pttdatahaku::ptt_read_data("tyonv_1001", "maakunta") %>%
-#'      ptt_draw_map(2020, "maakunta", "TYOTOSUUS") +
+#'      ptt_draw_map(2020, x = "TYOTOSUUS") +
 #'      scale_fill_gradient(low = "white", high = ggptt_palettes$ptt_new[1]) +
 #'        theme(legend.position = "top",
 #'              legend.justification = "left")
 #'
 ptt_draw_map <- function(data,
                          vuosi = substring(max(data$time), 1,4),
-                         aluejako, x,
+                         aluejako = NULL, x,
                          time = max(data$time),
                          grid = TRUE,
                          long_data = TRUE) {
+
+  if(long_data) {
+    data <- dplyr::filter(data, tiedot_code == x, time == time) %>%
+      tidyr::spread(tiedot_code, values)
+  }
+
+  if(is.null(aluejako)) {
+   aluejako <- stringr::str_remove(grep("_code", statficlassifications::detect_region_var(data)$name_key, value = TRUE), "_code")
+  }
+
 
   if(!is.null(attributes(data)$codes_names$tiedot)) {
     codes_names_tiedot <-attributes(data)$codes_names$tiedot
@@ -71,10 +81,7 @@ ptt_draw_map <- function(data,
 
   # Filter required from the input data
 
-  if(long_data) {
-  data <- dplyr::filter(data, tiedot_code == x, time == time) %>%
-          tidyr::spread(tiedot_code, values)
-  }
+
 
   output <- map %>%
              dplyr::left_join(data, by = paste0(aluejako, "_code")) %>%
