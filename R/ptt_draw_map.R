@@ -35,10 +35,7 @@ ptt_draw_map <- function(data,
                          grid = TRUE,
                          long_data = TRUE) {
 
-  if(long_data) {
-    data <- dplyr::filter(data, tiedot_code == x, time == time) %>%
-      tidyr::spread(tiedot_code, values)
-  }
+
 
   if(is.null(aluejako)) {
    aluejako <- stringr::str_remove(grep("_code", statficlassifications::detect_region_var(data)$name_key, value = TRUE), "_code")
@@ -81,8 +78,10 @@ ptt_draw_map <- function(data,
   map <- dplyr::rename_with(map, ~paste0(aluejako, "_code"), aluejako)
 
   # Filter required from the input data
-
-
+  if(long_data) {
+    data <- dplyr::filter(data, tiedot_code == x, time == time) %>%
+      tidyr::spread(tiedot_code, values)
+  }
 
   output <- map %>%
              dplyr::left_join(data, by = paste0(aluejako, "_code")) %>%
