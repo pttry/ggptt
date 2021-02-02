@@ -28,8 +28,9 @@
 #'              legend.justification = "left")
 #'
 ptt_draw_map <- function(data,
-                         vuosi = substring(max(data$time), 1,4),
-                         aluejako = NULL, x,
+                         x,
+                         map_year = substring(max(data$time), 1,4),
+                         aluejako = NULL,
                          time = max(data$time),
                          grid = TRUE,
                          long_data = TRUE) {
@@ -58,7 +59,7 @@ ptt_draw_map <- function(data,
 
   # Filter the required map from the list of all maps
   file <- tail(grep(paste0("tilastointialueet:", tolower(aluejako)),
-                    grep(as.character(vuosi), map_names, value = TRUE),
+                    grep(as.character(map_year), map_names, value = TRUE),
                     value = TRUE),
                n = 1)
 
