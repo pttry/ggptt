@@ -23,8 +23,11 @@
 #'
 
 
-hcptt_prepare_line_data <- function(x, group, xaxis, values, highlight){
+hcptt_prepare_line_data <- function(x, group, xaxis, values, highlight = NULL){
   y1 <- unique(pull(x, {{ xaxis }}))
+
+  if (is.null(highlight)) highlight <- unique(pull(x, {{ group }}))
+
   y2 <- x %>%
     select(name = {{ group }}, data = {{ values }}) %>%
     mutate(zIndex = as.numeric(name %in% highlight),

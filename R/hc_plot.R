@@ -36,8 +36,10 @@ hc_theme_ptt <- function(){
 #'   hcptt_hl_linechart(pdat, group = vars, xaxis = date,
 #'   values = values, highlight = c("uempmed", "uempmed2"))
 #'
+#'   hcptt_hl_linechart(pdat, group = vars, xaxis = date,
+#'   values = values)
 
-hcptt_hl_linechart <- function(data, group, xaxis, values, highlight,
+hcptt_hl_linechart <- function(data, group, xaxis, values, highlight = NULL,
                                theme = hc_theme_ptt()) {
   #data
   dat <- hcptt_prepare_line_data(x = {{ data }}, {{group}}, {{xaxis}}, {{values}}, {{highlight}})

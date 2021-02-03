@@ -9,7 +9,7 @@ hcptt_hl_linechart(
   group,
   xaxis,
   values,
-  highlight,
+  highlight = NULL,
   theme = hc_theme_ptt()
 )
 }
@@ -37,4 +37,6 @@ data modification is done internally by \code{\link{hcptt_prepare_line_data}}.
   hcptt_hl_linechart(pdat, group = vars, xaxis = date,
   values = values, highlight = c("uempmed", "uempmed2"))
 
+  hcptt_hl_linechart(pdat, group = vars, xaxis = date,
+  values = values)
 }

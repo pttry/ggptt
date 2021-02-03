@@ -4,7 +4,7 @@
 \alias{hcptt_prepare_line_data}
 \title{Prepare data for a costumised highcharts line plot}
 \usage{
-hcptt_prepare_line_data(x, group, xaxis, values, highlight)
+hcptt_prepare_line_data(x, group, xaxis, values, highlight = NULL)
 }
 \arguments{
 \item{x}{a data.frame of data to plot.}

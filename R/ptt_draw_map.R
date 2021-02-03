@@ -12,7 +12,9 @@
 #' @param long_data logical, whether input data is in the long form. Defaults to TRUE.
 #'
 #' @return figure
-#' @export dplyr
+#'
+#' @import dplyr
+#' @export
 #'
 #'
 #' @examples
