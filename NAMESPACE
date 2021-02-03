@@ -2,7 +2,9 @@
 
 S3method(line_wrap,default)
 S3method(line_wrap,factor)
+export(data_source_caption)
 export(deci_comma)
+export(dplyr)
 export(extra_breaks)
 export(factor_rev)
 export(geom_bari)

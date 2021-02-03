@@ -7,7 +7,7 @@
 #' @param vuosi kartan vuosi
 #' @param aluejako kartan aluejako
 #' @param x arvo muuttujassa \code{tiedot_code}
-#' @param time
+#' @param time time of data.
 #' @param grid logical, whether grid with coordinates is drawn. Defaults to TRUE
 #' @param long_data logical, whether input data is in the long form. Defaults to TRUE.
 #'
