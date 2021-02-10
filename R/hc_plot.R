@@ -42,6 +42,7 @@ hc_theme_ptt <- function(){
 hcptt_hl_linechart <- function(data, group, xaxis, values, highlight = NULL,
                                theme = hc_theme_ptt()) {
   #data
+  data <- droplevels(data)
   dat <- hcptt_prepare_line_data(x = {{ data }}, {{group}}, {{xaxis}}, {{values}}, {{highlight}})
 
   #colours
