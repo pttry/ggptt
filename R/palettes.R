@@ -61,6 +61,22 @@ vnk_pal <- function(n = NULL){
   ggptt_pal(n, "vnk")
 }
 
+#' Color palette Akava Works.
+#'
+#' Color palette for Akava Works.
+#'
+#' Recycled if needed (with warning).
+#'
+#' @param n A number of colour needed.
+#' @export
+#'
+#' @family ggptt_pal
+#' @examples
+#'  scales::show_col(aw_pal(6))
+
+aw_pal <- function(n = NULL){
+  ggptt_pal(n, "aw")
+}
 
 #' Palettes in ggptt
 #'
