@@ -25,6 +25,7 @@ Available palettes are: ptt, vnk.
 }
 \seealso{
 Other ggptt_pal: 
+\code{\link{aw_pal}()},
 \code{\link{ptt_pal}()},
 \code{\link{vnk_pal}()}
 }

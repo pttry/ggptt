@@ -21,6 +21,7 @@ Recycled if needed (with warning).
 }
 \seealso{
 Other ggptt_pal: 
+\code{\link{aw_pal}()},
 \code{\link{ggptt_pal}()},
 \code{\link{ptt_pal}()}
 }

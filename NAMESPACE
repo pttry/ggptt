@@ -2,6 +2,7 @@
 
 S3method(line_wrap,default)
 S3method(line_wrap,factor)
+export(aw_pal)
 export(data_source_caption)
 export(deci_comma)
 export(extra_breaks)
