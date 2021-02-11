@@ -32,17 +32,25 @@
 ptt_draw_map <- function(data,
                          x,
                          aluejako = NULL,
-                         map_year = substring(max(data$time), 1,4),
-                         time = max(data$time),
+                         map_year = NULL,
+                         time = NULL,
                          grid = TRUE,
                          long_data = TRUE) {
 
+  time_in_data <- "time" %in% names(data)
 
+  if(is.null(map_year)) {
+    if(!time_in_data) {
+      stop("Cannot infer a year for the map from the data. Assign the desired year of the map to variable 'map_year'.")
+    } else {
+    map_year <- substring(max(data$time), 1,4)
+    time <- max(data$time)
+    }
+  }
 
   if(is.null(aluejako)) {
    aluejako <- stringr::str_remove(grep("_code", statficlassifications::detect_region_var(data)$name_key, value = TRUE), "_code")
   }
-
 
   if(!is.null(attributes(data)$codes_names$tiedot)) {
     codes_names_tiedot <-attributes(data)$codes_names$tiedot
@@ -62,7 +70,7 @@ ptt_draw_map <- function(data,
                     value = TRUE),
                n = 1)
 
-  # Test if the search was successful
+  # Test if the search was successful, return error if not.
   if(length(file) == 0) {stop("Map not found!")}
 
   url <- httr::parse_url("https://geo.stat.fi/geoserver/tilastointialueet/wfs")
@@ -81,8 +89,13 @@ ptt_draw_map <- function(data,
 
   # Filter required from the input data
   if(long_data) {
+    if(time_in_data) {
     data <- dplyr::filter(data, tiedot_code == x, time == time) %>%
       tidyr::spread(tiedot_code, values)
+    } else {
+      data <- dplyr::filter(data, tiedot_code == x) %>%
+        tidyr::spread(tiedot_code, values)
+    }
   }
 
   output <- map %>%
