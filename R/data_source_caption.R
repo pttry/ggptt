@@ -9,8 +9,8 @@
 #'
 #' @examples
 #'
-#' ptt_read_data("tyonv_1001", "KOKO MAA") %>%
-#'   filter(tiedot_code == "AVPAIKAT") %>%
+#' pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA") %>%
+#'   dplyr::filter(tiedot_code == "AVPAIKAT") %>%
 #'   { ggplot(., aes(x = time, y = values)) +
 #'     geom_line() +
 #'     geom_smooth() +
@@ -18,6 +18,7 @@
 #'          y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
 #'      data_source_caption(.)
 #'    }
+#'
 data_source_caption <- function(data) {
 
   if(is.null(attributes(data)$citation)) {

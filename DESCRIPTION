@@ -16,7 +16,11 @@ Imports:
     scales,
     gridExtra,
     lubridate,
-    highcharter
+    highcharter,
+    magrittr,
+    pttdatahaku,
+    xml2,
+    sf
 LazyData: TRUE
 Suggests:
     testthat,

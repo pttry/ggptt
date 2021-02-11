@@ -2,6 +2,7 @@
 
 S3method(line_wrap,default)
 S3method(line_wrap,factor)
+export("%>%")
 export(aw_pal)
 export(data_source_caption)
 export(deci_comma)
@@ -39,3 +40,4 @@ import(dplyr)
 import(ggplot2)
 import(highcharter)
 import(rlang)
+importFrom(magrittr,"%>%")
