@@ -4,7 +4,12 @@
 \alias{data_source_caption}
 \title{Add data source caption to figure}
 \usage{
-data_source_caption(data)
+data_source_caption(
+  data,
+  citation = NULL,
+  text = "Data source:",
+  author = TRUE
+)
 }
 \arguments{
 \item{data}{}
@@ -26,5 +31,30 @@ pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA") \%>\%
          y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
      data_source_caption(.)
    }
+
+pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA") \%>\%
+  dplyr::filter(tiedot_code == "AVPAIKAT") \%>\%
+  { ggplot(., aes(x = time, y = values)) +
+    geom_line() +
+    geom_smooth() +
+    labs(x = NULL,
+         y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
+     data_source_caption(., author = FALSE, text = "TilastolÃ¤hde")
+   }
+
+data <- pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA")
+
+cit <- attributes(data)$citation
+
+data \%>\%
+  dplyr::filter(tiedot_code == "AVPAIKAT") \%>\%
+  { ggplot(., aes(x = time, y = values)) +
+    geom_line() +
+    geom_smooth() +
+    labs(x = NULL,
+         y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
+     data_source_caption(., author = FALSE, citation = cit, text = "TilastolÃ¤hde: Tilastokeskus")
+   }
+
 
 }

@@ -100,8 +100,8 @@ ptt_draw_map <- function(data,
 
   output <- map %>%
              dplyr::left_join(data, by = paste0(aluejako, "_code")) %>%
-             ggplot(aes_string(fill = x)) +
-                 geom_sf() +
+             ggplot() +
+                 geom_sf(aes_string(fill = x)) +
                  labs(fill = ifelse(!is.null(codes_names_tiedot),
                                     codes_names_tiedot[x], x))
 

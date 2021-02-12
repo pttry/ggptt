@@ -7,9 +7,9 @@
 ptt_draw_map(
   data,
   x,
-  map_year = substring(max(data$time), 1, 4),
   aluejako = NULL,
-  time = max(data$time),
+  map_year = NULL,
+  time = NULL,
   grid = TRUE,
   long_data = TRUE
 )
@@ -40,9 +40,9 @@ Tämä funktio piirtää datan Suomen kartalle käyttäjän määrittelemällä 
 pttdatahaku::ptt_read_data("tyonv_1001", "kunta") \%>\%
      ptt_draw_map( x = "TYOTOSUUS", map_year = 2020, aluejako = "kunta")
 pttdatahaku::ptt_read_data("tyonv_1001", "seutukunta") \%>\%
-     ptt_draw_map(x = "TYOTOSUUS", map_yea = 2020, aluejako = "seutukunta")
+     ptt_draw_map(x = "TYOTOSUUS", map_year = 2020, aluejako = "seutukunta")
 pttdatahaku::ptt_read_data("tyonv_1001", "maakunta") \%>\%
-     ptt_draw_map( x = "TYOTOSUUS", map_year = 2020) +
+     ptt_draw_map(x = "TYOTOSUUS", map_year = 2020) +
      scale_fill_gradient(low = "white", high = ggptt_palettes$ptt_new[1]) +
        theme(legend.position = "top",
              legend.justification = "left")

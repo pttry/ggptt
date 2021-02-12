@@ -20,7 +20,10 @@ Imports:
     magrittr,
     pttdatahaku,
     xml2,
-    sf
+    sf,
+    statficlassifications,
+    httr,
+    stringr
 LazyData: TRUE
 Suggests:
     testthat,

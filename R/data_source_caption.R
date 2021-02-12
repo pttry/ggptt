@@ -19,13 +19,46 @@
 #'      data_source_caption(.)
 #'    }
 #'
-data_source_caption <- function(data) {
+#' pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA") %>%
+#'   dplyr::filter(tiedot_code == "AVPAIKAT") %>%
+#'   { ggplot(., aes(x = time, y = values)) +
+#'     geom_line() +
+#'     geom_smooth() +
+#'     labs(x = NULL,
+#'          y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
+#'      data_source_caption(., author = FALSE, text = "Tilastolähde")
+#'    }
+#'
+#' data <- pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA")
+#'
+#' cit <- attributes(data)$citation
+#'
+#' data %>%
+#'   dplyr::filter(tiedot_code == "AVPAIKAT") %>%
+#'   { ggplot(., aes(x = time, y = values)) +
+#'     geom_line() +
+#'     geom_smooth() +
+#'     labs(x = NULL,
+#'          y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
+#'      data_source_caption(., author = FALSE, citation = cit, text = "Tilastolähde: Tilastokeskus")
+#'    }
+#'
+#'
+data_source_caption <- function(data,
+                                citation = NULL,
+                                text = "Data source:",
+                                author = TRUE) {
 
-  if(is.null(attributes(data)$citation)) {
+  if(is.null(attributes(data)$citation) & is.null(citation)) {
      message("No citation information found to create caption.")
   }
-  labs(caption = paste("Data source:",
-                              attributes(data)$citation$author,
-                              attributes(data)$citation$table_code,
-                              sep = " "))
+
+  if(is.null(citation)) {
+    citation <- attributes(data)$citation
+  }
+
+  labs(caption = paste(text,
+                       if(author) {citation$author} else {""},
+                       citation$table_code,
+                       sep = " "))
 }
