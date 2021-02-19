@@ -49,7 +49,7 @@ ptt_draw_map <- function(data,
   }
 
   if(is.null(aluejako)) {
-   aluejako <- stringr::str_remove(grep("_code", statficlassifications::detect_region_var(data)$name_key, value = TRUE), "_code")
+   aluejako <- stringr::str_remove(grep("_code", statficlassifications::detect_region_var(data), value = TRUE), "_code")
   }
 
   if(!is.null(attributes(data)$codes_names$tiedot)) {
