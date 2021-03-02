@@ -1,3 +1,9 @@
+ggptt 1.2.5
+===========
+
+* `translate_plot()` to translate all text in a plot.
+* `ptt_draw_map()` to plot a map.
+
 ggptt 1.2.4
 ===========
 

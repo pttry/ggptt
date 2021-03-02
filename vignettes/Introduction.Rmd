@@ -152,3 +152,15 @@ p + scale_y_continuous(breaks = extra_breaks(17))
 
 * `ggsave_twitter()` to save plots for twitter.
 
+## Translation
+
+* `translate_plot()` to translate all text in a plot.
+
+```{r translate}
+
+p <- ggplot(mtcars, aes(x = wt, y=mpg)) + geom_point() + labs(title = "Test plot")
+translation <- c("Test plot" = "Testikuvio", wt = "Paino", mpg = "Mailia per gallona")
+p2 <- translate_plot(p, translation)
+`
+
+```
