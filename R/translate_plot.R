@@ -7,8 +7,10 @@
 #' @import dplyr
 #'
 #' @examples
-#' p <- ggplot(mtcars, aes(x = wt, y=mpg)) + geom_point() + labs(title = "Test plot")
-#' translation <- c("Test plot" = "Testikuvio", wt = "Paino", mpg = "Mailia per gallona")
+#' p <- ggplot(mtcars, aes(x = wt, y=mpg)) + geom_point() +
+#'      labs(title = "Test plot", caption = "Source: some")
+#' translation <- c("Test plot" = "Testikuvio", wt = "Paino",
+#'                  mpg = "Mailia per gallona", Source = "Lähde")
 #' p2 <- translate_plot(p, translation)
 #'
 #' library(patchwork)
@@ -20,6 +22,7 @@ translate_plot <- function(plot, trans){
   if (inherits(plot, "patchwork")){
 
     patches <- patchwork:::get_patches(plot)
+    mod_plots <- patches$plots
     mod_plots[[1]] <- translator(patches$plots[[1]], trans)
     mod_plots[[2]][[1]] <- translator(patches$plots[[2]][[1]], trans)
     mod_plots[[2]][[2]] <- translator(patches$plots[[2]][[2]], trans)
@@ -60,7 +63,8 @@ translator <- function(plot, trans){
 
 
     plot$labels <- plot$labels %>%
-      purrr::map( ~recode(.x, !!!trans))
+      purrr::map( ~stringi::stri_replace_all_fixed(.x, names(trans), trans, vectorize_all=FALSE))
+
 
   } else {
    plot <- plot

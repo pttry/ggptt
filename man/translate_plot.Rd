@@ -15,8 +15,10 @@ translate_plot(plot, trans)
 Translate all text in plot
 }
 \examples{
-p <- ggplot(mtcars, aes(x = wt, y=mpg)) + geom_point() + labs(title = "Test plot")
-translation <- c("Test plot" = "Testikuvio", wt = "Paino", mpg = "Mailia per gallona")
+p <- ggplot(mtcars, aes(x = wt, y=mpg)) + geom_point() +
+     labs(title = "Test plot", caption = "Source: some")
+translation <- c("Test plot" = "Testikuvio", wt = "Paino",
+                 mpg = "Mailia per gallona", Source = "LÃ¤hde")
 p2 <- translate_plot(p, translation)
 
 library(patchwork)
