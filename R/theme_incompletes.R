@@ -5,7 +5,9 @@
 #' Shortcuts to modify theme elements with \code{\link{theme}}.
 #'
 #' @param blanks In \code{the_title_blank} a vector of initial for blank titles.
-#' A default is all titles: \code{c("x", "y", "t", "l")} for x-axis, y-axis, plot title and legend.
+#'   A default is all titles: \code{c("x", "y", "t", "l", "c")} for x-axis,
+#'   y-axis, plot title, legend and caption. Also a string in form
+#'   \code{c("xyt")} works.
 #' @export
 #'
 the_x45 <- function() theme(axis.text.x = element_text(angle = 45, hjust = 1))
@@ -16,10 +18,12 @@ the_legend_bot <- function() theme(legend.position = "bottom")
 
 #' @describeIn the_x45 blank titles
 #' @export
-the_title_blank <- function(blanks = c("x", "y", "t", "l")){
+the_title_blank <- function(blanks = c("x", "y", "t", "l", "c")){
+  blanks <- unlist(strsplit(blanks, ""))
   blank_list <- list(axis.title.x = element_blank(),
                      axis.title.y = element_blank(),
                      plot.title = element_blank(),
-                     legend.title = element_blank())
-  do.call("theme", blank_list[c(x = 1, y = 2, t = 3, l = 4)[blanks]])
+                     legend.title = element_blank(),
+                     plot.caption = element_blank())
+  do.call("theme", blank_list[c(x = 1, y = 2, t = 3, l = 4, c = 5)[blanks]])
 }

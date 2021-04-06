@@ -1,3 +1,8 @@
+ggptt 
+=====
+* the_title_blank accepts now also c("xyt") form and includes a blank caption option.
+
+
 ggptt 1.2.5
 ===========
 

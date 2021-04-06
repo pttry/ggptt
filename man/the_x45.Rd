@@ -10,11 +10,13 @@ the_x45()
 
 the_legend_bot()
 
-the_title_blank(blanks = c("x", "y", "t", "l"))
+the_title_blank(blanks = c("x", "y", "t", "l", "c"))
 }
 \arguments{
 \item{blanks}{In \code{the_title_blank} a vector of initial for blank titles.
-A default is all titles: \code{c("x", "y", "t", "l")} for x-axis, y-axis, plot title and legend.}
+A default is all titles: \code{c("x", "y", "t", "l", "c")} for x-axis,
+y-axis, plot title, legend and caption. Also a string in form
+\code{c("xyt")} works.}
 }
 \description{
 Convinient functions to set theme elements.
