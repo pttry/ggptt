@@ -2,6 +2,8 @@
 #'
 #' This geom allows you to annotate the plot with horizontal lines on y = 0.
 #'
+#' @param dashed A locigal to have a dashed line.
+#'
 #' @export
 #' @import ggplot2
 #' @examples

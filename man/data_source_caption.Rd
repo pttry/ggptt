@@ -12,7 +12,13 @@ data_source_caption(
 )
 }
 \arguments{
-\item{data}{}
+\item{data}{a data}
+
+\item{citation}{an alternative citation object}
+
+\item{text}{a text to precide a citation.}
+
+\item{author}{A locigal whether to include an author.}
 }
 \value{
 

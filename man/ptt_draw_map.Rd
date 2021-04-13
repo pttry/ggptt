@@ -21,13 +21,13 @@ ptt_draw_map(
 
 \item{aluejako}{kartan aluejako}
 
+\item{map_year}{kartan vuosi}
+
 \item{time}{time of data.}
 
 \item{grid}{logical, whether grid with coordinates is drawn. Defaults to TRUE}
 
 \item{long_data}{logical, whether input data is in the long form. Defaults to TRUE.}
-
-\item{vuosi}{kartan vuosi}
 }
 \value{
 figure

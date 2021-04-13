@@ -4,7 +4,7 @@
 #'
 #'
 #' @param data data.frame
-#' @param vuosi kartan vuosi
+#' @param map_year kartan vuosi
 #' @param aluejako kartan aluejako
 #' @param x arvo muuttujassa \code{tiedot_code}
 #' @param time time of data.

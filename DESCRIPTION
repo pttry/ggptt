@@ -23,7 +23,10 @@ Imports:
     sf,
     statficlassifications,
     httr,
-    stringr
+    stringr,
+    patchwork, 
+    purrr,
+    stringi
 LazyData: TRUE
 Suggests:
     testthat,

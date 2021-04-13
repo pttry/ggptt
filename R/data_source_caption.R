@@ -2,7 +2,10 @@
 #'
 #' Citation information is retrieved from data attributes and used to create a data source caption.
 #'
-#' @param data
+#' @param data a data
+#' @param citation an alternative citation object
+#' @param text a text to precide a citation.
+#' @param author A locigal whether to include an author.
 #'
 #' @return
 #' @export

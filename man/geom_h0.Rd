@@ -6,6 +6,9 @@
 \usage{
 geom_h0(dashed = FALSE)
 }
+\arguments{
+\item{dashed}{A locigal to have a dashed line.}
+}
 \description{
 This geom allows you to annotate the plot with horizontal lines on y = 0.
 }
