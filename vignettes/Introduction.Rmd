@@ -151,6 +151,7 @@ p + scale_y_continuous(breaks = extra_breaks(17))
 ## Saving shorcuts
 
 * `ggsave_twitter()` to save plots for twitter.
+* `ggsave_twitter()` to save plots for blog text.
 
 ## Translation
 
