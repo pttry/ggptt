@@ -1,7 +1,7 @@
 Package: ggptt
 Type: Package
 Title: Themes and ggplot2 Functions for PTT
-Version: 1.2.6
+Version: 1.2.6.9001
 Authors@R: c(person("Janne", "Huovari", email = "janne.huovari@ptt.fi", role = c("aut", "cre")),
              person("Juho", "Alasalmi", email = "juho.alasalmi@ptt.fi", role = c("aut")))
 Description: A collection of ggplot2 themes and functions for use in PTT.
@@ -19,7 +19,6 @@ Imports:
     lubridate,
     highcharter,
     magrittr,
-    pttdatahaku,
     xml2,
     sf,
     statficlassifications,
@@ -30,6 +29,7 @@ Imports:
     stringi
 LazyData: TRUE
 Suggests:
+    pttdatahaku,
     testthat,
     knitr
 Encoding: UTF-8
