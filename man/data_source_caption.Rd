@@ -45,7 +45,7 @@ pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA") \%>\%
     geom_smooth() +
     labs(x = NULL,
          y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
-     data_source_caption(., author = FALSE, text = "TilastolÃ¤hde")
+     data_source_caption(., author = FALSE, text = "Tilastolähde")
    }
 
 data <- pttdatahaku::ptt_read_data("tyonv_1001", "KOKO MAA")
@@ -59,7 +59,7 @@ data \%>\%
     geom_smooth() +
     labs(x = NULL,
          y = attributes(.)$codes_names$tiedot["AVPAIKAT"]) +
-     data_source_caption(., author = FALSE, citation = cit, text = "TilastolÃ¤hde: Tilastokeskus")
+     data_source_caption(., author = FALSE, citation = cit, text = "Tilastolähde: Tilastokeskus")
    }
 
 

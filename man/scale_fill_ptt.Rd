@@ -4,6 +4,8 @@
 \alias{scale_fill_ptt}
 \alias{scale_colour_ptt}
 \alias{scale_color_ptt}
+\alias{scale_colour_ptt_lg}
+\alias{scale_color_ptt_lg}
 \title{PTT colour and fill scale}
 \usage{
 scale_fill_ptt(...)
@@ -11,6 +13,10 @@ scale_fill_ptt(...)
 scale_colour_ptt(...)
 
 scale_color_ptt(...)
+
+scale_colour_ptt_lg(...)
+
+scale_color_ptt_lg(...)
 }
 \arguments{
 \item{...}{Other arguments passed on to \code{\link{discrete_scale}}.}

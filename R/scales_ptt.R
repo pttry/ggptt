@@ -20,8 +20,22 @@ scale_colour_ptt <- function(...){
   discrete_scale("colour", "ptt", ptt_pal, ...)
 }
 
+
 #' @rdname scale_fill_ptt
 #' @export
 scale_color_ptt <- function(...){
   discrete_scale("colour", "ptt", ptt_pal, ...)
+}
+
+
+#' @rdname scale_fill_ptt
+#' @export
+scale_colour_ptt_lg <- function(...){
+  discrete_scale("colour", "ptt_lg", ptt_pal_lg, ...)
+}
+
+#' @rdname scale_fill_ptt
+#' @export
+scale_color_ptt_lg <- function(...){
+  discrete_scale("colour", "ptt_lg", ptt_pal_lg, ...)
 }

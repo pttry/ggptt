@@ -2,9 +2,12 @@
 % Please edit documentation in R/palettes.R
 \name{ptt_pal}
 \alias{ptt_pal}
+\alias{ptt_pal_lg}
 \title{Color palette PTT.}
 \usage{
 ptt_pal(n = NULL)
+
+ptt_pal_lg(n = NULL)
 }
 \arguments{
 \item{n}{A number of colour needed.}
@@ -16,8 +19,14 @@ Color palette for PTT (discrete).
 Palette of colours "darkolivegreen4", "cornflowerblue", "darkorange2", "coral4", "mediumpurple3", "grey50".
 Recycled if needed (with warning).
 }
+\section{Functions}{
+\itemize{
+\item \code{ptt_pal_lg}: PTT palette with last colour grey.
+}}
+
 \examples{
  scales::show_col(ptt_pal(6))
+ scales::show_col(ptt_pal_lg(5))
 }
 \seealso{
 Other ggptt_pal: 

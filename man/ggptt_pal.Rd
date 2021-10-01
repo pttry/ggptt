@@ -4,7 +4,7 @@
 \alias{ggptt_pal}
 \title{Color palettes in ggptt package.}
 \usage{
-ggptt_pal(n = NULL, name)
+ggptt_pal(n = NULL, name, last_grey = FALSE)
 }
 \arguments{
 \item{n}{A number of colour needed. NULL (default) return all available.}
@@ -22,6 +22,7 @@ Available palettes are: ptt, vnk.
 \examples{
  scales::show_col(ggptt_pal(n = 6, name = "ptt"))
  scales::show_col(ggptt_pal(n = 6, name = "vnk"))
+ scales::show_col(ggptt_pal(n = 6, name = "ptt", last_grey = TRUE))
 }
 \seealso{
 Other ggptt_pal: 

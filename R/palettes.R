@@ -13,8 +13,9 @@
 #' @examples
 #'  scales::show_col(ggptt_pal(n = 6, name = "ptt"))
 #'  scales::show_col(ggptt_pal(n = 6, name = "vnk"))
+#'  scales::show_col(ggptt_pal(n = 6, name = "ptt", last_grey = TRUE))
 
-ggptt_pal <- function(n = NULL, name){
+ggptt_pal <- function(n = NULL, name, last_grey = FALSE){
   cols <- ggptt_palettes[[name]]
   if (is.null(cols)) stop(name, " is not a valid palette name for ggptt_pal")
   if (is.null(n)) n <- length(cols)
@@ -22,7 +23,10 @@ ggptt_pal <- function(n = NULL, name){
     warning("n is greater than maximum number of colours in ", name,
             "palette. Colours are recycled")
   col_seg <- rep(1:length(cols), times = ceiling(n/length(cols)))[1:n]
-  cols[col_seg]
+  cols <- cols[col_seg]
+
+  if (last_grey) cols <- c(cols[-length(cols)], "grey75")
+  cols
 }
 
 
@@ -39,9 +43,19 @@ ggptt_pal <- function(n = NULL, name){
 #' @family ggptt_pal
 #' @examples
 #'  scales::show_col(ptt_pal(6))
+#'  scales::show_col(ptt_pal_lg(5))
 
 ptt_pal <- function(n = NULL){
   ggptt_pal(n, "ptt")
+}
+
+
+#' @describeIn ptt_pal PTT palette with last colour grey.
+#' @export
+#'
+
+ptt_pal_lg <- function(n = NULL){
+  ggptt_pal(n, "ptt", last_grey = TRUE)
 }
 
 #' Color palette VNK.
