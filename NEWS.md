@@ -1,6 +1,7 @@
-ggptt 
-=====
+ggptt 1.2.5
+===========
 * the_title_blank accepts now also c("xyt") form and includes a blank caption option.
+* ggsave_blog() and ggsave_ppt_half()
 
 
 ggptt 1.2.5

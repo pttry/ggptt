@@ -2,9 +2,30 @@
 % Please edit documentation in R/save.R
 \name{ggsave_twitter}
 \alias{ggsave_twitter}
-\title{Save plots for twitter}
+\alias{ggsave_blog}
+\alias{ggsave_ppt_half}
+\alias{ggsave_ppt}
+\title{Save plots}
 \usage{
 ggsave_twitter(
+  filename,
+  file_path = file.path(Sys.getenv("USERPROFILE"), "Downloads"),
+  plot = last_plot()
+)
+
+ggsave_blog(
+  filename,
+  file_path = file.path(Sys.getenv("USERPROFILE"), "Downloads"),
+  plot = last_plot()
+)
+
+ggsave_ppt_half(
+  filename,
+  file_path = file.path(Sys.getenv("USERPROFILE"), "Downloads"),
+  plot = last_plot()
+)
+
+ggsave_ppt(
   filename,
   file_path = file.path(Sys.getenv("USERPROFILE"), "Downloads"),
   plot = last_plot()
@@ -18,5 +39,14 @@ ggsave_twitter(
 \item{plot}{Plot to save, defaults to last plot displayed.}
 }
 \description{
-Save plots for twitter
+Save plots
 }
+\section{Functions}{
+\itemize{
+\item \code{ggsave_blog}: 
+
+\item \code{ggsave_ppt_half}: Save to ppt-slide a half slide plot.
+
+\item \code{ggsave_ppt}: Save to ppt-slide a whole slide plot.
+}}
+
