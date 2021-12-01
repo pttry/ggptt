@@ -3,6 +3,7 @@
 #' @param filename File name to create on disk without extension
 #' @param file_path A path to save file. Default is user Downloads folder.
 #' @param plot Plot to save, defaults to last plot displayed.
+#' @param height Plot height.
 #'
 #'
 #' @export
@@ -30,8 +31,9 @@ ggsave_twitter <- function(filename,
 #' @export
 #'
 ggsave_blog <- function(filename,
-                           file_path = file.path(Sys.getenv("USERPROFILE"),"Downloads"),
-                           plot = last_plot()){
+                        file_path = file.path(Sys.getenv("USERPROFILE"),"Downloads"),
+                        plot = last_plot(),
+                        height = 5){
   plot2 = plot +
     ggplot2::theme(text = element_text(size = 14)) +
     ggplot2::theme(
@@ -42,7 +44,7 @@ ggsave_blog <- function(filename,
   ggplot2::ggsave(file.path(file_path, paste0(filename, ".png")),
                   plot = plot2,
                   width = 7,
-                  height = 5)
+                  height = height)
 }
 
 

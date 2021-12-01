@@ -16,7 +16,8 @@ ggsave_twitter(
 ggsave_blog(
   filename,
   file_path = file.path(Sys.getenv("USERPROFILE"), "Downloads"),
-  plot = last_plot()
+  plot = last_plot(),
+  height = 5
 )
 
 ggsave_ppt_half(
@@ -37,6 +38,8 @@ ggsave_ppt(
 \item{file_path}{A path to save file. Default is user Downloads folder.}
 
 \item{plot}{Plot to save, defaults to last plot displayed.}
+
+\item{height}{Plot height.}
 }
 \description{
 Save plots
