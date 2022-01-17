@@ -40,7 +40,7 @@ ggsave_blog <- function(filename,
       plot.subtitle = ggplot2::element_text(colour = "grey40"),
       plot.caption = ggplot2::element_text(size = 10, face = "plain", colour = "grey40"),
       text = ggplot2::element_text(face = "plain"),
-      plot.margin = ggplot2::margin(1, 1, 2, 1))
+      plot.margin = ggplot2::margin(2, 3, 3, 2))
   ggplot2::ggsave(file.path(file_path, paste0(filename, ".png")),
                   plot = plot2,
                   width = 7,
