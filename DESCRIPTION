@@ -34,7 +34,7 @@ Suggests:
     knitr,
     rmarkdown
 Remotes:
-    github::pttry/pttdatahaku
+    github::pttry/pttdatahaku,
     github::pttry/statficlassifications
 Encoding: UTF-8
 VignetteBuilder: knitr
