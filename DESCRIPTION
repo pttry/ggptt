@@ -33,6 +33,9 @@ Suggests:
     testthat,
     knitr,
     rmarkdown
+Remotes:
+    github::pttry/pttdatahaku
+    github::pttry/statficlassifications
 Encoding: UTF-8
 VignetteBuilder: knitr
 RoxygenNote: 7.1.2
