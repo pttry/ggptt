@@ -17,7 +17,6 @@ Imports:
     scales,
     gridExtra,
     lubridate,
-    highcharter,
     magrittr,
     xml2,
     sf,
@@ -30,6 +29,7 @@ Imports:
 LazyData: TRUE
 Suggests:
     pttdatahaku,
+    highcharter,
     testthat,
     knitr,
     rmarkdown
