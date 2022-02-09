@@ -29,7 +29,6 @@ Imports:
 LazyData: TRUE
 Suggests:
     pttdatahaku,
-    highcharter,
     testthat,
     knitr,
     rmarkdown
