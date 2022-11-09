@@ -15,7 +15,7 @@ theme_ptt <- function(base_size = 12, base_family = ""){
   update_geom_defaults("col", list(fill = ptt_pal(1)))
   update_geom_defaults("point", list(size = 4, colour = ptt_pal(1)))
   update_geom_defaults("text", list(size = 4, colour = ptt_pal(1)))
-  update_geom_defaults("line", list(size = 1.5, colour = ptt_pal(1)))
+  update_geom_defaults("line", list(linewidth = 1.5, colour = ptt_pal(1)))
   theme_bw(base_size = base_size, base_family = base_family) +
     theme(plot.margin = grid::unit(c(0.6,0.7,0.5,0.6), "cm"),
           panel.grid.minor = element_blank(),
