@@ -29,6 +29,31 @@ percent_comma <- function(x){
   x
 }
 
+#' Format numbers above unity
+#'
+#' @param x numeric
+#'
+#' @return numeric
+#' @export
+#'
+#' @examples
+#' thousand_space(1000000)
+thousand_space <- function(x) {
+  format(x, big.mark = " ", scientific = FALSE)
+}
+
+#' Format numbers below and above unity
+#'
+#' @param x numeric
+#'
+#' @return numeric
+#' @export
+#'
+#' @examples
+#' format_number(c(100000, 0.234))
+format_number <- function(x) {
+  sapply(x, function(x) ifelse(abs(x) <= 1, deci_comma(x), thousand_space(x)))
+}
 
 #' Year formatter for a two-number format.
 #'
