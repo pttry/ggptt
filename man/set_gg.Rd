@@ -28,9 +28,9 @@ Scales are assign in \code{ggptt_sets} environment.
 }
 \section{Functions}{
 \itemize{
-\item \code{unset_gg}: Unset theme and scales
-}}
+\item \code{unset_gg()}: Unset theme and scales
 
+}}
 \examples{
 l_df <- data.frame(t = c(1,2,3), y = c(4,3,5, 5,7,6), cc = c(1,1,1,2,2,2))
 p <- ggplot(l_df, aes(t, y, colour = factor(cc))) + geom_line()

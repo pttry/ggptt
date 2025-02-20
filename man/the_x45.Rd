@@ -26,8 +26,8 @@ Shortcuts to modify theme elements with \code{\link{theme}}.
 }
 \section{Functions}{
 \itemize{
-\item \code{the_legend_bot}: legend.position = "bottom"
+\item \code{the_legend_bot()}: legend.position = "bottom"
 
-\item \code{the_title_blank}: blank titles
+\item \code{the_title_blank()}: blank titles
+
 }}
-

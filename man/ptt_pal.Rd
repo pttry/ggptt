@@ -21,9 +21,9 @@ Recycled if needed (with warning).
 }
 \section{Functions}{
 \itemize{
-\item \code{ptt_pal_lg}: PTT palette with last colour grey.
-}}
+\item \code{ptt_pal_lg()}: PTT palette with last colour grey.
 
+}}
 \examples{
  scales::show_col(ptt_pal(6))
  scales::show_col(ptt_pal_lg(5))

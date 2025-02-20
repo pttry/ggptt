@@ -46,10 +46,10 @@ Save plots
 }
 \section{Functions}{
 \itemize{
-\item \code{ggsave_blog}: 
+\item \code{ggsave_blog()}: 
 
-\item \code{ggsave_ppt_half}: Save to ppt-slide a half slide plot.
+\item \code{ggsave_ppt_half()}: Save to ppt-slide a half slide plot.
 
-\item \code{ggsave_ppt}: Save to ppt-slide a whole slide plot.
+\item \code{ggsave_ppt()}: Save to ppt-slide a whole slide plot.
+
 }}
-

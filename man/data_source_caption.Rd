@@ -20,9 +20,6 @@ data_source_caption(
 
 \item{author}{A locigal whether to include an author.}
 }
-\value{
-
-}
 \description{
 Citation information is retrieved from data attributes and used to create a data source caption.
 }

@@ -17,7 +17,7 @@ gen_alt_text <- function() {
     "Describe this plot in one paragraph, as suitable for inclusion in
    alt-text. You should briefly describe the plot type, the axes, and
    2-5 major visual patterns.",
-    content_image_plot()
+    ellmer::content_image_plot()
   )
 
 }
