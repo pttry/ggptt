@@ -21,3 +21,29 @@ gen_alt_text <- function() {
   )
 
 }
+
+#' Title
+#'
+#' @return
+#' @export
+#'
+#' @examples
+analyse_fig <- function(x = NULL) {
+
+  chat <- ellmer::chat_gemini(system_prompt = "You are a statistician and an economist. Your
+                              reasoning is based on economic theory, but you critically evaluate
+                              whether your reasoning matches the statistical evidence provided.
+                              You also tend take the recent events into account in your analysis.")
+
+  message(
+  chat$chat(
+    paste0("Describe this plot in 3 paragraphs: in the first, you describe the describe
+           the plot type, the axes, and 2-5 major visual patterns. In the second, you
+           elaborate on the most prominent finding. In the third, you attempt to make
+           sense of the finding basing your reasoning on economics theory.", x),
+    ellmer::content_image_plot()
+  )
+  )
+
+}
+
